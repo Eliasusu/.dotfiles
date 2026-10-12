@@ -1,0 +1,44 @@
+# Perfil base — repos oficiales (pacman). Un paquete por línea, # para comentarios.
+
+# Shell y prompt
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+starship
+
+# Git
+git
+stow
+github-cli
+git-delta
+lazygit
+
+# Versiones de lenguajes (Java, Node, pnpm)
+mise
+
+# CLI modernas
+fzf
+zoxide
+ripgrep
+fd
+bat
+eza
+btop
+neovim
+wl-clipboard
+rsync
+unzip
+curl
+
+# Terminal y editores
+ghostty
+zed
+ttf-jetbrains-mono-nerd
+
+# Contenedores
+docker
+docker-compose
+docker-buildx
+
+# Red
+openssh

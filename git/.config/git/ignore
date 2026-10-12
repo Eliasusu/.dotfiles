@@ -1,0 +1,18 @@
+# gitignore global (git lo lee de ~/.config/git/ignore sin configurar nada)
+
+# Editores
+.idea/
+.vscode/
+.zed/
+*.swp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias y builds
+node_modules/
+
+# Secretos locales
+.env
+.env.local

@@ -1,0 +1,13 @@
+# Perfil sre — solo existe si corriste `./install.sh sre`.
+# Versiones globales; un proyecto puede fijar otras en su mise.toml.
+[tools]
+kubectl = "latest"
+k9s = "latest"
+helm = "latest"
+kubectx = "latest"
+kind = "latest"
+terraform = "latest"
+aws-cli = "latest"
+trivy = "latest"
+sops = "latest"
+age = "latest"

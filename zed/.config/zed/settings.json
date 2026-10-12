@@ -1,0 +1,39 @@
+// Zed settings — gestionado por ~/.dotfiles
+// `zed: open default settings` muestra todas las opciones
+{
+  "base_keymap": "VSCode",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Tokyo Night"
+  },
+  "auto_install_extensions": {
+    "tokyo-night": true,
+    "java": true,
+    "dockerfile": true,
+    "toml": true
+  },
+  "icon_theme": "Zed (Default)",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 15,
+  "ui_font_size": 16,
+  "format_on_save": "modifications",
+  "minimap": {
+    "show": "never",
+    "thumb": "always"
+  },
+  "terminal": {
+    "font_size": 15.0
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "type": "registry"
+    }
+  }
+}

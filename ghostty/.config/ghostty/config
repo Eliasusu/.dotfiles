@@ -1,0 +1,18 @@
+# Ghostty — `ghostty +show-config --default --docs` lista todas las opciones
+
+# Tema: archivo en ./themes/tokyonight_night (de folke/tokyonight.nvim)
+theme = tokyonight_night
+
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+
+window-padding-x = 8
+window-padding-y = 6
+window-save-state = always
+
+# Al hacer ssh, Ghostty se presenta como xterm-256color.
+# Arregla el backspace roto en los servidores de la Muni (no conocen "xterm-ghostty").
+shell-integration-features = ssh-env
+
+copy-on-select = clipboard
+confirm-close-surface = false

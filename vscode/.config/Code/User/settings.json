@@ -1,0 +1,70 @@
+{
+  // --- Editor ------------------------------------------------------------------
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.minimap.enabled": false,
+  "editor.language.colorizedBracketPairs": [],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+
+  // --- Formatter por lenguaje (reemplaza a los perfiles) -----------------------
+  "[css]": { "editor.defaultFormatter": "vscode.css-language-features" },
+  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
+  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 4
+  },
+  "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" },
+
+  // --- Apariencia --------------------------------------------------------------
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "symbols",
+  "workbench.startupEditor": "none",
+  "workbench.browser.showInTitleBar": false,
+  "window.menuBarVisibility": "compact",
+  "symbols.hidesExplorerArrows": false,
+
+  // --- Terminal ----------------------------------------------------------------
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontLigatures.enabled": true,
+
+  // --- Git ---------------------------------------------------------------------
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.ignoreMissingGitWarning": true,
+
+  // --- JS / TS -----------------------------------------------------------------
+  "javascript.format.enable": false,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.experimental.useTsgo": true,
+
+  // --- IA ----------------------------------------------------------------------
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "chat.editing.confirmEditRequestRemoval": false,
+  "chat.instructionsFilesLocations": {
+    ".claude/rules": true,
+    ".github/instructions": true
+  },
+
+  // --- Varios ------------------------------------------------------------------
+  "explorer.confirmDelete": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "http.systemCertificatesNode": true,
+  "redhat.telemetry.enabled": false,
+  "console-ninja.featureSet": "Community",
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml"
+  ]
+}

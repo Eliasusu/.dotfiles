@@ -1,0 +1,67 @@
+# Starship — prompt. Docs: https://starship.rs/config/
+# Colores Tokyo Night. Muestra solo lo que importa en la carpeta actual.
+
+add_newline = true
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$java\
+$nodejs\
+$docker_context\
+$kubernetes\
+$aws\
+$cmd_duration\
+$line_break\
+$character"""
+
+[directory]
+style = "bold #7aa2f7"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "bold #bb9af7"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "#e0af68"
+format = "([$all_status$ahead_behind]($style) )"
+
+[java]
+symbol = " "
+style = "#ff9e64"
+format = "[$symbol$version]($style) "
+
+[nodejs]
+symbol = " "
+style = "#9ece6a"
+format = "[$symbol$version]($style) "
+
+[docker_context]
+symbol = " "
+style = "#2ac3de"
+format = "[$symbol$context]($style) "
+
+# Solo aparece si kubectl está instalado (perfil sre) y hay un contexto activo
+[kubernetes]
+disabled = false
+symbol = "󱃾 "
+style = "#7dcfff"
+format = "[$symbol$context( \\($namespace\\))]($style) "
+
+[aws]
+symbol = " "
+style = "#ff9e64"
+format = "[$symbol($profile )(\\($region\\) )]($style)"
+
+[cmd_duration]
+min_time = 2000
+style = "#565f89"
+format = "[⏱ $duration]($style) "
+
+[character]
+success_symbol = "[❯](bold #9ece6a)"
+error_symbol = "[❯](bold #f7768e)"

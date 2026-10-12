@@ -1,0 +1,9 @@
+# mise — versiones globales por defecto. Cada proyecto puede fijar las suyas
+# con un mise.toml propio (ej. SIAT: java = "temurin-17").
+[tools]
+java = "temurin-25"
+node = "lts"
+pnpm = "latest"
+
+[settings]
+experimental = false

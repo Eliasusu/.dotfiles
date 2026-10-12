@@ -1,0 +1,51 @@
+# Extensiones de VS Code — una por línea. `./install.sh` instala las que falten.
+# Para ver las que tenés instaladas: code --list-extensions
+
+# Tema e íconos
+enkia.tokyo-night
+miguelsolorio.symbols
+
+# Java / SIAT (debug, JSP, Ant, Tomcat)
+vscjava.vscode-java-pack
+redhat.java
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-test
+vscjava.vscode-maven
+vscjava.vscode-gradle
+nickheap.vscode-ant
+samuel-weinhardt.vscode-jsp-lang
+jsxtools.jstl
+redhat.vscode-community-server-connector
+redhat.vscode-rsp-ui
+vmware.vscode-boot-dev-pack
+
+# JS / TS / Web
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+yoavbls.pretty-ts-errors
+bradlc.vscode-tailwindcss
+vue.volar
+expo.vscode-expo-tools
+pranaygp.vscode-css-peek
+zignd.html-css-class-completion
+wallabyjs.console-ninja
+
+# Python
+ms-python.python
+charliermarsh.ruff
+
+# Docker / remoto
+ms-azuretools.vscode-containers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-containers
+
+# Utilidades
+anthropic.claude-code
+eamodio.gitlens
+usernamehw.errorlens
+redhat.vscode-yaml
+tamasfe.even-better-toml
+humao.rest-client
+mechatroner.rainbow-csv
+ms-ceintl.vscode-language-pack-es

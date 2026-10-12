@@ -1,0 +1,4 @@
+# Skills globales de Claude Code. Formato: <repo> <skill>
+# Se instalan con: npx skills add <repo> --skill <skill> -g -a claude-code -y
+# (las skills que vienen sincronizadas de tu cuenta de Claude no van acá)
+vercel-labs/skills find-skills
