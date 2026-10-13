@@ -65,6 +65,11 @@
   "console-ninja.featureSet": "Community",
   "yaml.disableSchemaDetection": [
     "**/.github/workflows/*.yml",
-    "**/.github/workflows/*.yaml"
-  ]
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
+  "sonarlint.automaticAnalysis": false
 }
