@@ -26,6 +26,7 @@ bat
 eza
 btop
 neovim
+tree-sitter-cli   # LazyVim compila los parsers de treesitter con esto
 wl-clipboard
 rsync
 unzip

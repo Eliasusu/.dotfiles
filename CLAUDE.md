@@ -35,7 +35,7 @@ Una tarea en este repo está terminada cuando pasa todo esto:
 
 ## Archivos que las apps reescriben
 
-Como las configs son symlinks, algunas apps escriben a través del link y el cambio aparece en `git diff`: `vscode/…/settings.json`, `zed/…/settings.json`, `lazygit/…/config.yml`, `claude/.claude/settings.json` (herdr agrega su hook). Ante un diff ahí, clasificalo: cambio de preferencia hecho por el usuario → se commitea; ruido generado por la app (claves reordenadas, defaults agregados, estado de UI) → se descarta con `git checkout -- <archivo>`. Si una app reemplazó el symlink por un archivo, `./install.sh --check` lo reporta.
+Como las configs son symlinks, algunas apps escriben a través del link y el cambio aparece en `git diff`: `vscode/…/settings.json`, `zed/…/settings.json`, `lazygit/…/config.yml`, `nvim/…/lazy-lock.json` y `lazyvim.json` (`:Lazy update`, `:LazyExtras`), `claude/.claude/settings.json` (herdr agrega su hook). Ante un diff ahí, clasificalo: cambio de preferencia hecho por el usuario → se commitea; ruido generado por la app (claves reordenadas, defaults agregados, estado de UI) → se descarta con `git checkout -- <archivo>`. Si una app reemplazó el symlink por un archivo, `./install.sh --check` lo reporta.
 
 ## Límites
 
