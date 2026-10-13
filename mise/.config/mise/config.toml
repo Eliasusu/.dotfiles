@@ -1,5 +1,6 @@
 # mise — versiones globales por defecto. Cada proyecto puede fijar las suyas
-# con un mise.toml propio (ej. SIAT: java = "temurin-17").
+# con un mise.toml propio. Java 25 es el de la shell y los IDEs en todos lados;
+# un proyecto viejo fija su Java solo para el build (ver docs/adr/0008).
 [tools]
 java = "temurin-25"
 node = "lts"
