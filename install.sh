@@ -239,7 +239,7 @@ run_work() {
     run "$PRIVATE/install.sh" "${flags[@]}"
   else
     die "El perfil work vive en el repo privado. Clonalo primero:
-    git clone git@github.com:<tu-usuario>/dotfiles-private.git ~/.dotfiles-private"
+    git clone git@github.com:Eliasusu/dotfiles-private.git ~/.dotfiles-private"
   fi
 }
 

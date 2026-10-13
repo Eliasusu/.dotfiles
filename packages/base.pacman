@@ -9,6 +9,7 @@ starship
 # Git
 git
 stow
+shellcheck
 github-cli
 git-delta
 lazygit

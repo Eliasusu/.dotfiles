@@ -11,7 +11,7 @@ Mi entorno de desarrollo en Arch/CachyOS: un solo comando deja una máquina nuev
 
 ```bash
 sudo pacman -S --needed git stow
-git clone https://github.com/<usuario>/dotfiles.git ~/.dotfiles
+git clone https://github.com/Eliasusu/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh --dry-run base desktop   # mirá qué va a hacer
 ./install.sh base desktop
@@ -23,7 +23,7 @@ El script pide `sudo` una vez. Al final genera una clave SSH para la máquina y 
 PC del trabajo: después de lo anterior,
 
 ```bash
-git clone git@github.com:<usuario>/dotfiles-private.git ~/.dotfiles-private
+git clone git@github.com:Eliasusu/dotfiles-private.git ~/.dotfiles-private
 ./install.sh work
 ```
 
