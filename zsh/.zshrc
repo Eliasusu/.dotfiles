@@ -1,4 +1,4 @@
-# ~/.zshrc — gestionado por ~/.dotfiles (no editar el symlink a ciegas: edita el repo)
+# ~/.zshrc — gestionado por el repo dotfiles (no editar el symlink a ciegas: edita el repo)
 #
 # Orden de carga:
 #   1. opciones de zsh (historial, completado, teclas)
