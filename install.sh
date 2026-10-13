@@ -18,7 +18,7 @@ BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 
 # Qué paquetes de stow linkea cada perfil
 declare -A STOW_PKGS=(
-  [base]="zsh starship git ghostty zed lazygit herdr vscode nvim claude mise bat"
+  [base]="zsh starship git ssh ghostty zed lazygit herdr vscode nvim claude mise bat"
   [desktop]=""
   [sre]="sre"
 )

@@ -25,6 +25,7 @@ fd
 bat
 eza
 btop
+tailspin          # colorea logs (tspin)
 neovim
 tree-sitter-cli   # LazyVim compila los parsers de treesitter con esto
 wl-clipboard

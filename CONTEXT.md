@@ -43,7 +43,7 @@ La relación entre ambos repos: el privado se aplica después del público y sol
 _Avoid_: herencia, fork, merge
 
 **Gancho**:
-Un punto del repo público que carga un archivo opcional que puede no existir, para que otro repo o la propia máquina lo complete.
+Un punto del repo público que carga un archivo opcional que puede no existir, para que otro repo o la propia máquina lo complete. Hoy: `~/.zshrc.local`, `~/.config/zsh/*.zsh`, `~/.gitconfig-work` y `~/.ssh/config.d/*`.
 _Avoid_: hook (reservado para hooks de git y de Claude), extension point, include
 
 ## Configs

@@ -31,7 +31,7 @@ git clone git@github.com:Eliasusu/dotfiles-private.git ~/.dotfiles-private
 
 | Perfil    | Qué trae |
 |-----------|----------|
-| `base`    | zsh + starship, git + gh + delta + lazygit, mise (Java 25, Node LTS, pnpm), fzf, zoxide, ripgrep, fd, bat, eza, btop, neovim + LazyVim, Ghostty, Zed, VS Code, Docker, Claude Code, herdr |
+| `base`    | zsh + starship, git + gh + delta + lazygit, mise (Java 25, Node LTS, pnpm), fzf, zoxide, ripgrep, fd, bat, eza, btop, tailspin, ssh config (con gancho `config.d/`), neovim + LazyVim, Ghostty, Zed, VS Code, Docker, Claude Code, herdr |
 | `desktop` | Spotify, Obsidian, OnlyOffice, RustDesk, Tailscale, waypipe |
 | `sre`     | kubectl, k9s, helm, kubectx, kind, terraform, aws-cli, trivy, sops, age (mise) + ansible |
 | `work`    | vive en el repo privado |
