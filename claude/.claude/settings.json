@@ -3,7 +3,9 @@
     "deny": [
       "Bash(git commit*)",
       "Bash(git push*)",
-      "Bash(git tag*)",
+      "Bash(git tag -a*)",
+      "Bash(git tag -s*)",
+      "Bash(git push --tags*)",
       "Bash(gh pr create*)",
       "Bash(glab mr create*)"
     ]
