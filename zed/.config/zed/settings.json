@@ -1,6 +1,7 @@
 // Zed settings — gestionado por el repo dotfiles
 // `zed: open default settings` muestra todas las opciones
 {
+  "cli_default_open_behavior": "existing_window",
   "project_panel": {
     "dock": "left"
   },
