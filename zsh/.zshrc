@@ -54,3 +54,4 @@ command -v starship >/dev/null && eval "$(starship init zsh)"
 # syntax-highlighting tiene que ser lo último que se carga
 [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] &&
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

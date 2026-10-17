@@ -35,5 +35,6 @@ command -v bat >/dev/null && alias cat='bat --paging=never'
 alias lg='lazygit'
 alias dc='docker compose'
 alias reload='exec zsh'
+alias c='clear'
 # El repo puede estar en ~/.dotfiles o ~/dotfiles: se sigue el symlink de .zshrc
 dotfiles() { cd "${${:-$HOME/.zshrc}:A:h:h}" }
