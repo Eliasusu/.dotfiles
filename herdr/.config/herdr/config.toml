@@ -1,1 +1,8 @@
 onboarding = false
+
+[ui.toast]
+delivery = "system"
+
+[theme]
+name = "tokyo-night"
+auto_switch = false

@@ -48,5 +48,12 @@
     "claude-acp": {
       "type": "registry"
     }
+  },
+  "lsp": {
+    "jdtls": {
+      "settings": {
+        "java_home": "~/.local/share/mise/installs/java/temurin-25"
+      }
+    }
   }
 }
