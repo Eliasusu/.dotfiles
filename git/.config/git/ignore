@@ -16,3 +16,6 @@ node_modules/
 # Secretos locales
 .env
 .env.local
+
+# Notas personales (symlink al mini-vault del proyecto en second-brain)
+.vault
