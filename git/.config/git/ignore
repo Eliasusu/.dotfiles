@@ -19,3 +19,4 @@ node_modules/
 
 # Notas personales (symlink al mini-vault del proyecto en second-brain)
 .vault
+vault/
