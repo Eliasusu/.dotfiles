@@ -20,7 +20,7 @@ BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 declare -A STOW_PKGS=(
   [base]="zsh starship git ssh ghostty zed lazygit herdr vscode nvim claude mise bat"
   [desktop]=""
-  [sre]="sre"
+  [sre]="sre lazydocker"
 )
 ALL_PROFILES=(base desktop sre work)
 

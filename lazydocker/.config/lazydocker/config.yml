@@ -1,0 +1,15 @@
+# lazydocker — tema Tokyo Night (folke/tokyonight.nvim), igual que lazygit
+gui:
+  nerdFontsVersion: "3"
+  theme:
+    activeBorderColor:
+      - "#ff9e64"
+      - "bold"
+    inactiveBorderColor:
+      - "#27a1b9"
+    optionsTextColor:
+      - "#7aa2f7"
+    selectedLineBgColor:
+      - "#283457"
+    defaultFgColor:
+      - "#c0caf5"

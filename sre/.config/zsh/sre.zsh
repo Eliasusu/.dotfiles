@@ -20,3 +20,8 @@ command -v aws_completer >/dev/null && {
   autoload -U +X bashcompinit && bashcompinit
   complete -C aws_completer aws
 }
+
+if command -v docker >/dev/null; then
+  source <(docker completion zsh)
+  command -v lazydocker >/dev/null && alias lzd='lazydocker'
+fi
