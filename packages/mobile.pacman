@@ -1,0 +1,6 @@
+# Perfil mobile — repos oficiales (pacman)
+# El SDK de Android (cmdline-tools, platform-tools, emulator, system images)
+# lo instala post_mobile() en install.sh — no hay paquetes de pacman que usar.
+
+# Uso con dispositivos físicos: mtpfs para montar el celu (opcional)
+libmtp

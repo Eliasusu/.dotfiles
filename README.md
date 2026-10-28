@@ -33,7 +33,8 @@ git clone git@github.com:Eliasusu/dotfiles-private.git ~/.dotfiles-private
 |-----------|----------|
 | `base`    | zsh + starship, git + gh + delta + lazygit, mise (Java 25, Node LTS, pnpm), fzf, zoxide, ripgrep, fd, bat, eza, btop, tailspin, ssh config (con gancho `config.d/`), neovim + LazyVim, Ghostty, Zed, VS Code, Docker, Claude Code, herdr |
 | `desktop` | Spotify, Obsidian, OnlyOffice, RustDesk, Tailscale, waypipe |
-| `sre`     | kubectl, k9s, helm, kubectx, kind, terraform, aws-cli, trivy, sops, age (mise) + ansible, lazydocker |
+| `sre`     | kubectl, k9s, helm, kubectx, kind, terraform, aws-cli, trivy, sops, age (mise) + ansible |
+| `mobile`  | Android SDK (cmdline-tools, platform-tools, emulator, API 35 + system image), AVD por defecto, aliases de emulador |
 | `work`    | vive en el repo privado |
 
 ## Opciones

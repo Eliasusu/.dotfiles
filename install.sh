@@ -4,11 +4,12 @@
 #   ./install.sh base desktop        # laptop / PC personal
 #   ./install.sh base work           # PC del trabajo (necesita ~/.dotfiles-private)
 #   ./install.sh sre                 # agrega las herramientas SRE/DevOps
+#   ./install.sh mobile              # agrega Android SDK + emulador (React Native)
 #   ./install.sh --dry-run base      # muestra qué haría, sin tocar nada
 #   ./install.sh --links-only base   # solo symlinks, sin instalar paquetes
 #   ./install.sh --check             # qué paquetes instalaste sin versionar / links pisados
 #
-# Perfiles: base, desktop, sre (repo público) · work (repo privado)
+# Perfiles: base, desktop, sre, mobile (repo público) · work (repo privado)
 
 set -euo pipefail
 
@@ -20,9 +21,10 @@ BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 declare -A STOW_PKGS=(
   [base]="zsh starship git ssh ghostty zed lazygit herdr vscode nvim claude mise bat"
   [desktop]=""
-  [sre]="sre lazydocker"
+  [sre]="sre"
+  [mobile]="mobile"
 )
-ALL_PROFILES=(base desktop sre work)
+ALL_PROFILES=(base desktop sre mobile work)
 
 DRY_RUN=0
 LINKS_ONLY=0
@@ -60,7 +62,7 @@ for arg in "$@"; do
     --links-only)  LINKS_ONLY=1 ;;
     --check)       CHECK=1 ;;
     -h|--help)     usage 0 ;;
-    base|desktop|sre|work) REQUESTED+=("$arg") ;;
+    base|desktop|sre|mobile|work) REQUESTED+=("$arg") ;;
     *) warn "Opción o perfil desconocido: $arg"; usage 1 ;;
   esac
 done
@@ -228,6 +230,54 @@ post_desktop() {
 post_sre() {
   step "[sre] mise: instalando kubectl, terraform, aws-cli… (puede tardar)"
   command -v mise >/dev/null && run env MISE_YES=1 mise install
+}
+
+# --- mobile: Android SDK (cmdline-tools, emulator, system image) --------------------
+post_mobile() {
+  command -v mise >/dev/null || die "[mobile] necesita mise (perfil base)"
+
+  # El SDK usa el Java que mise pone en el PATH
+  local sdk="$HOME/Android/sdk"
+  local cmdline="$sdk/cmdline-tools/latest/bin"
+
+  step "[mobile] Android cmdline-tools"
+  if [[ ! -x "$cmdline/sdkmanager" ]]; then
+    local url="https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip"
+    local tmp; tmp="$(mktemp -d)"
+    run curl -fsSL "$url" -o "$tmp/cmdline-tools.zip"
+    run unzip -q "$tmp/cmdline-tools.zip" -d "$tmp"
+    run mkdir -p "$sdk/cmdline-tools"
+    run mv "$tmp/cmdline-tools" "$sdk/cmdline-tools/latest"
+    run rm -rf "$tmp"
+    ok "cmdline-tools instalados"
+  else
+    ok "cmdline-tools ya instalados"
+  fi
+
+  step "[mobile] componentes del SDK (platform-tools, emulator, platform, system image)"
+  # Licencias: acepta todas sin prompt
+  yes 2>/dev/null | run "$cmdline/sdkmanager" --licenses >/dev/null || true
+  run "$cmdline/sdkmanager" --install \
+    platform-tools \
+    emulator \
+    "platforms;android-35" \
+    "build-tools;35.0.0" \
+    "system-images;android-35;google_apis;x86_64"
+
+  step "[mobile] AVD por defecto (Pixel_7_API_35)"
+  if ! "$cmdline/avdmanager" list avd -c 2>/dev/null | grep -qx "Pixel_7_API_35"; then
+    run "$cmdline/avdmanager" create avd \
+      --name "Pixel_7_API_35" \
+      --package "system-images;android-35;google_apis;x86_64" \
+      --device "pixel_7" --force
+    ok "AVD creado"
+  else
+    ok "AVD ya existe"
+  fi
+
+  # Emulador necesita KVM: avisar si no está disponible
+  [[ -r /dev/kvm && -w /dev/kvm ]] ||
+    warn "Sin permisos en /dev/kvm — el emulador va a ser muy lento (agregate al grupo kvm)"
 }
 
 run_work() {
