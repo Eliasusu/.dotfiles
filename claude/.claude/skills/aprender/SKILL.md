@@ -62,7 +62,7 @@ Si digo "ship" o "modo shipping", resolvés esa tarea como siempre (plan → imp
 
 Solo registro, sin repaso automático. Cuando aparece un error conceptual, un concepto que vale la pena guardar o una pregunta que queda abierta, proponé una entrada y escribila cuando te diga que sí.
 
-- Archivo: `~/Documentos/second-brain/Proyectos/<nombre del repo>/aprendizaje.md`. Si no existe, lo creás.
+- Archivo: `~/Documentos/second-brain/02-Projects/<nombre del repo>/aprendizaje.md`. Si no existe, lo creás.
 - Formato:
 
   ```markdown
