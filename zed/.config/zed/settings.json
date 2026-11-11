@@ -1,6 +1,12 @@
 // Zed settings — gestionado por el repo dotfiles
 // `zed: open default settings` muestra todas las opciones
 {
+  "show_signature_help_after_edits": false,
+  "always_treat_brackets_as_autoclosed": false,
+  "colorize_brackets": true,
+  "sticky_scroll": {
+    "enabled": true
+  },
   "cli_default_open_behavior": "new_window",
   "markdown_preview": {
     "open_markdown_files_in_preview": false,
@@ -55,7 +61,9 @@
   "lsp": {
     "jdtls": {
       "settings": {
-        "java_home": "~/.local/share/mise/installs/java/temurin-25"
+        "java_home": "~/.local/share/mise/installs/java/temurin-25",
+        "lsp_proxy_path": "~/.local/share/java-lsp-proxy/java-lsp-proxy",
+        "jdtls_launcher": "/home/epalami0/.local/share/jdtls-manual/jdt-language-server/bin/jdtls"
       }
     }
   }

@@ -45,5 +45,6 @@
   "theme": "dark",
   "verbose": false,
   "autoScrollEnabled": false,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "model": "opus"
 }
